@@ -37,6 +37,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #function
+    'crud',
+    'blog',
+    'accounts',
+    #third
+    'bootstrap4',
+    'debug_toolbar',
 ]
 
 MIDDLEWARE = [
@@ -54,7 +61,10 @@ ROOT_URLCONF = 'django_react.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            # File System Temlplate Loaders
+            os.path.join(BASE_DIR,'django_react','templates')
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
